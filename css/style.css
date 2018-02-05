@@ -1,0 +1,879 @@
+
+:root {
+    --primary: #303f9f;
+    --secundary: #536dfe;
+    --defaultColor: #4e4e4e;
+    --titleColor: #848484;
+    --iconFocus: #ffffff;
+    --icon: #ffffff;
+}
+
+
+/* Colors Title, Buttons, Labels, Inputs, All*/
+.ma-container .ma-color-primary {
+    color: var(--primary);
+}
+
+.ma-container .ma-color-secondary {
+    color: var(--secundary);
+}
+
+.ma-container .btn-danger {
+    color: #fff;
+    background-color: #d9534f;
+    opacity: .9;
+}
+
+.ma-container .btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    opacity: .9;
+}
+
+.ma-container .btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    opacity: .9;
+}
+
+.ma-container .btn-info {
+    color: #fff;
+    background-color: #337ab7;
+    opacity: .9;
+}
+
+.ma-container .btn-primary {
+    color: #fff;
+    background-color: var(--primary);
+    opacity: .9;
+}
+
+.ma-container label {
+    color: var(--defaultColor);
+}
+
+.ma-container input {
+    color: var(--defaultColor);
+}
+
+.ma-container .panel {
+    background-color: #fff;
+}
+
+/*.ma-container .form-control.gmd.active ~ label, .form-control.gmd:focus ~ label {*/
+ /*color: var(--defaultColor) !important;*/
+
+/*}*/
+
+/* Reset Panel GMD */
+.ma-container .panel.gmd {
+    padding: 0px;
+}
+
+.gumga-layout header > .navbar {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2), 0 1px 1px 0 rgba(0, 0, 0, .14), 0 2px 1px -1px rgba(0, 0, 0, .12);
+}
+
+.gumga-layout .gl-header {
+    box-shadow: none;
+}
+
+/* --- Css Padrão Mobiage --*/
+
+.ma-container a:active, a:hover, a:focus, button:active, button:hover, button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.ma-container .ma-no-pad-left {
+    padding-left: 0px;
+}
+
+.ma-container .ma-no-pad-right {
+    padding-right: 0px;
+}
+
+.ma-container .ma-no-pad-all {
+    padding: 0px;
+}
+
+.ma-container .ma-no-border {
+    border: none;
+}
+
+.ma-container .container-fluid {
+    padding: 0px;
+}
+
+.ma-container .row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.ma-container .ma-page {
+    width: 1366px;
+    position: relative;
+    margin: 0 auto;
+}
+
+main {
+    padding: 0px;
+}
+
+/* --- Fim  --- */
+
+/* --- Panels Mobiage --- */
+
+.ma-container .panel.gmd .panel-heading {
+    border-bottom: 1px solid #dfdfdf;
+    font-size: 15px;
+}
+
+.ma-container .panel.gmd {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 3px;
+    margin-bottom: 15px;
+}
+
+.ma-container .panel.gmd .panel.gmd {
+    border: 1px solid #f5f5f5;
+    box-shadow: none;
+}
+
+.ma-container .ma-pad-left-panel {
+    padding-left: 7.5px;
+}
+
+.ma-container .ma-pad-right-panel {
+    padding-right: 7.5px;
+}
+
+.ma-container .ma-pad-panel {
+    padding: 24px 9px;
+}
+
+.ma-container .ma-panel-individual {
+    min-height: 378px;
+}
+
+.ma-container .ma-panel-juridica {
+    min-height: 440px;
+}
+
+/* --- Fim --- */
+
+/* --- Panel Phone/Mail Mobiage --- */
+
+.ma-container .ma-min-panel {
+    min-height: 201px;
+}
+
+.ma-container .ma-box-element {
+    padding-bottom: 21px;
+    border-bottom: 1px solid #d6d6d6c4;
+    margin-bottom: 15px;
+}
+
+.ma-container .pad-social {
+    padding-top: 9px;
+}
+
+/* --- Fim --- */
+
+/* --- Gumga Errors --- */
+
+gumga-errors > button.ng-binding {
+    display: none;
+}
+
+/*div.ma-container .form-control.gmd.active ~ label, .form-control.gmd:focus ~ label, div.ma-container gmd-select .dropdown.gmd label.floating-dropdown {*/
+/*color: #444;*/
+/*}*/
+
+/* --- Fim --- */
+
+/* --- Buttons Mobiage --- */
+.ma-container .btn-group .btn {
+    font-size: 13px;
+}
+
+.ma-container .btn.gmd.ma-btn-default {
+    font-weight: 600;
+    border: 0;
+    border-radius: 3px;
+    transition: all 120ms ease-out;
+    color: #333;
+    background-color: #e6e6e6;
+    opacity: .9;
+}
+
+/* --- Panels Gumga / Mobiage --- */
+
+.ma-container .panel-address {
+    min-height: 417px;
+}
+
+.ma-container gmd-option.ng-scope.ng-isolate-scope {
+    line-height: 40px;
+}
+
+.ma-container gumga-address > div.row > div.col-md-12.col-sm-12.col-xs-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.ma-container gumga-address .col-md-4 {
+    height: 64px;
+}
+
+.ma-container gumga-address button.btn.btn-primary.gmd {
+    margin-bottom: 6px !important;
+}
+
+/* --- Fim --- */
+
+/* --- Labels & Inputs Mobiage --- */
+
+label {
+    margin-bottom: 0px;
+}
+
+.ma-container gmd-input > div, .ma-container gmd-select > div, div.ma-hm {
+    height: 34px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.ma-container div.reset-height gmd-input > div, .ma-container div.reset-height gmd-select > div, div.reset-height div.ma-hm {
+    height: 34px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.ma-container div.reset-input-hm > gmd-input > div, .ma-container div.reset-input-hm gmd-select > div, div.reset-input-hm div.ma-hm {
+    height: 34px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.ma-container .ma-panel .col-md-1, .ma-container .ma-panel .col-md-2, .ma-container .ma-panel .col-md-3, .ma-container .ma-panel .col-md-4, .ma-container .ma-panel .col-md-5, .ma-container .ma-panel .col-md-6, .ma-container .ma-panel .col-md-7, .ma-container .ma-panel .col-md-8, .ma-container .ma-panel .col-md-9, .ma-container .ma-panel .col-md-10, .ma-container .ma-panel .col-md-11, .ma-container .ma-panel .col-md-12 {
+    min-height: 64px;
+}
+
+.ma-container .ma-panel div.reset-height .col-md-1, .ma-container .ma-panel div.reset-height .col-md-2, .ma-container .ma-panel div.reset-height .col-md-3, .ma-container .ma-panel div.reset-height .col-md-4, .ma-container .ma-panel div.reset-height .col-md-5, .ma-container .ma-panel div.reset-height .col-md-6, .ma-container .ma-panel div.reset-height .col-md-7, .ma-container .ma-panel div.reset-height .col-md-8, .ma-container .ma-panel div.reset-height .col-md-9, .ma-container .ma-panel div.reset-height .col-md-10, .ma-container .ma-panel div.reset-height .col-md-11, .ma-container .ma-panel div.reset-height .col-md-12 {
+    min-height: 0px;
+}
+
+.ma-container gmd-select .dropdown.gmd label.floating-dropdown {
+    font-size: 16px;
+}
+
+.ma-container label.input-label {
+    font-size: 13px;
+    font-weight: 400;
+/ / color: #444;
+}
+
+.ma-container .ma-select {
+    margin-bottom: 4px;
+}
+
+.ma-container .ma-select label {
+    margin-bottom: 0px;
+}
+
+/*Not Effect Focus Input Label*/
+.ma-container .margin-many {
+    margin-bottom: 0px;
+    height: 0px;
+    width: 100%;
+}
+
+/*div.ma-container .form-control.gmd ~ label {*/
+/*color: #444;*/
+/*}*/
+
+.ma-container .switch {
+    border: 0px;
+}
+
+.ma-container .box-captcha {
+    width: 152px;
+    display: inline-block;
+    float: left;
+}
+
+.ma-container .captcha i {
+    float: left;
+    position: relative;
+    z-index: 10;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.ma-container .captcha {
+    margin-top: -23px;
+}
+
+/*MARCADORES*/
+.ma-container input.ui-select-search.input-xs.ng-pristine.ng-untouched.ng-valid.ng-empty {
+    padding-left: 0px;
+}
+
+.ma-container .ma-marcadores {
+    border-bottom: 1px solid #ddd;
+}
+
+.ma-container .ui-select-multiple.ui-select-bootstrap {
+    padding: 7px 3px 0;
+}
+
+/* --- Fim --- */
+
+/* --- Button Mobiage --- */
+
+.ma-container .ma-btn-nf {
+    position: relative;
+    top: 8px;
+    margin-top: 4px;
+}
+
+.ma-container .btn.gmd.btn-default {
+    color: #444;
+}
+
+.ma-container .bt-group-mobiage > .btn.gmd {
+    padding: 6px 8px;
+}
+
+/* --- Fim --- */
+
+/* --- Titulos Mobiage --- */
+
+.ma-container .ma-title {
+    text-transform: capitalize;
+    background-color: transparent;
+    line-height: 2em;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    padding-left: 24px;
+    color: var(--titleColor);
+    height: 54px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font: 400 16px Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+    font-size: 24px;
+}
+
+.ma-container form[name="forms"] {
+    margin-top: 0px;
+}
+
+/* --- Fim --- */
+
+/* --- Upload de Img Mobiage --- */
+
+gumga-avatar > div {
+    margin: 0px auto;
+}
+
+.ma-container .group-simple-img {
+    margin-right: 20px;
+    width: 12.666667%;
+}
+
+.ma-container div.ma-edit-img .simple-image-container > img {
+    border-radius: 50%;
+    background-color: var(--primary);
+    max-height: 130px;
+}
+
+.ma-container .ma-proc5-left {
+    margin-left: 5%;
+}
+
+.ma-container div.ma-edit-img {
+    width: 25%;
+}
+
+.ma-container .btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+/* --- Fim --- */
+
+/* --- Casos Especiais Mobiage --- */
+
+.ma-container .ma-aviso-nf {
+    position: relative;
+    top: 4px;
+    left: 8px;
+}
+
+.ma-container .ma-generic-role {
+    margin: 5px;
+    color: #fff;
+}
+
+.ma-container .role {
+    margin-bottom: 15px;
+}
+
+.ma-container .ma-pad-info {
+    padding-right: 25px;
+    line-height: 0px;
+}
+
+.ma-container .nav-tabs.gmd > li > a {
+    font-weight: 400;
+}
+
+.ma-container .nav-tabs.gmd > li.active > a {
+    font-weight: 600;
+}
+
+.ma-container .nav-tabs.gmd > li > a:after, .nav-tabs.gmd > li > a:before {
+    height: 4px;
+}
+
+.ma-container .nav-tabs.gmd > li > a:after, .nav-tabs.gmd > li > a:before {
+    background-color: var(--primary);
+}
+
+.ma-container gmd-select button > span.item-select {
+    font-size: 14px;
+}
+
+.ma-container button.btn.btn-primary.gmd {
+    margin-bottom: 4px;
+}
+
+.ma-container div.tab-content {
+    margin-top: 0;
+}
+
+.ma-container div.form-group {
+    margin: 0;
+}
+
+.ma-container .btn-group {
+    margin-bottom: 10px;
+}
+
+.ma-container gmd-fab[fixed] {
+    z-index: 10;
+}
+
+.ma-container #clientGroup {
+    margin-bottom: 5px;
+}
+
+.ma-container .cnae gmd-input div {
+    margin-top: -4px;
+}
+
+.ma-container .invisible-label {
+    visibility: hidden;
+}
+
+.ma-container .ma-more-inf {
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+.ma-container .avancado {
+    padding-top: 7px;
+}
+
+/* --- Fim --- */
+
+/*--- icones ---*/
+
+.ma-container .form-group > a.text.text-primary {
+    position: absolute;
+    right: 0px;
+    top: -8px;
+}
+
+.ma-container .ma-icons {
+    text-align: left;
+    position: relative;
+    bottom: 5px;
+}
+
+.ma-container .ma-icon-phone {
+    margin-top: 3px;
+    font-size: 22px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.ma-container .ma-icons > div > span {
+    margin: 0px 11px 0px 0px;
+
+}
+
+.ma-container i.icon-ativo {
+    color: var(--primary);
+}
+
+.ma-container i.icon-default {
+    color: #a5a5a5;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.ma-container i.icon-default:hover {
+    color: var(--primary);
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.ma-container .ma-danger-plus {
+    position: relative;
+    top: 10px;
+}
+
+.ma-container i.icon-danger, .ma-container i.icon-danger:hover {
+    color: #ec4757;
+}
+
+.ma-container i.ma-icon-plus {
+    color: var(--primary);
+}
+
+.ma-container i.icon-default {
+    font-size: 19px;
+    cursor: pointer;
+}
+
+/* --- Fim --- */
+
+/* --- Tabs Mobiage --- */
+.ma-container .border-role {
+    margin-top: -25px;
+    position: relative;
+    width: 101.4%;
+    left: -8px;
+}
+
+.ma-container .role-tabs {
+    position: relative;
+}
+
+/* --- Fim --- */
+
+/* --- Grands --- */
+.ma-container grands-atributo .row .col-md-12 .col-md-4 {
+    height: 64px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.ma-container grands-atributo .row .col-md-12 label {
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.ma-container grands-atributo > .row > .col-md-12, grands-atributo > .row > .col-md-12 > .row > .row > .col-md-12 {
+    padding-left: 0px;
+    padding-right: 0px;
+
+}
+
+.ma-container .ma-absolute {
+    position: absolute;
+}
+
+/* --- Fim --- */
+
+/* --- Input de Pesquisa --- */
+
+.form-control.gmd.inp-pesq {
+    padding-right: 25px;
+}
+
+.input-pesq {
+    color: #444;
+    position: absolute;
+    top: 10px;
+    font-size: 17px;
+    right: 23px;
+}
+
+/* --- CheckBox --- */
+.ma-checkbox {
+    float: left;
+    margin-right: 25px;
+    padding-top: 25px;
+    display: inline-block;
+}
+
+.ma-container ul.role-tabs > li a {
+    padding: 8px 15px;
+}
+
+.ma-container ul.role-tabs > li.active a {
+    padding: 12px 15px;
+
+}
+
+.ma-container ul.role-tabs > li.active {
+    margin-top: -8px;
+}
+
+.ma-container .ma-reset-m-top-gmd gmd-input div {
+    margin-top: 0px;
+}
+
+menu-shrink.fixed ~ main > grands-footer > footer.gl-footer.fixed {
+    margin-left: 250px !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.ma-container .captcha.ma-group-client.ma-reset-m-top-gmd {
+    margin-top: -36px;
+}
+
+@media (min-width: 0px) and (max-width: 1366px) {
+
+    .ma-container .ma-page {
+        width: 100%;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .ma-container .captcha {
+        margin-top: -16px;
+    }
+
+    .ma-container .box-captcha {
+        width: 129px;
+    }
+
+}
+
+@media (min-width: 0px) and (max-width: 1280px) {
+    .ma-container .box-captcha {
+        width: 110px;
+    }
+
+    .ma-container .captcha {
+        margin-top: -13px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1050px) {
+    .ma-container .no-padding-ipad-pro {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .ma-container label.input-label {
+        font-size: 11px;
+        font-weight: 400;
+    }
+
+    .ma-container .btn {
+        font-size: 12px;
+    }
+
+    .ma-container .box-captcha {
+        width: 138px;
+    }
+
+    .ma-container .ma-icon-phone {
+        font-size: 16px;
+    }
+
+    .ma-container .captcha {
+        margin-top: -26px;
+    }
+
+    .ma-container i.icon-default {
+        font-size: 16px;
+    }
+
+    .ma-container .bt-group-mobiage > .btn.gmd {
+        padding: 6px 4px;
+        font-size: 11px;
+    }
+
+    .ma-container .ma-icons > div > span {
+        margin: 0px 5px 0px 0px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 992px) {
+    .ma-checkbox {
+        padding-top: 0px;
+    }
+
+    .ma-container .ma-reset-m-top-gmd gmd-input div {
+        margin-top: 11px;
+    }
+
+    .ma-container .no-padding-ipad {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .ma-container .captcha {
+        margin-top: -29px;
+    }
+
+    .ma-container .ma-pad-left-panel {
+        padding-left: 15px;
+    }
+
+    .ma-container .ma-pad-right-panel {
+        padding-right: 15px;
+    }
+
+    .ma-container .group-simple-img {
+        width: 50%;
+        position: relative;
+        margin: auto;
+    }
+
+    .ma-container .ma-proc5-left {
+        margin-left: 0;
+    }
+
+    .ma-container .ma-panel-individual {
+        min-height: 278px;
+    }
+
+    .ma-container .ma-panel-juridica {
+        min-height: 363px;
+    }
+
+    .ma-container gumga-address .col-md-4, gumga-address .col-md-8 {
+        height: 34px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .ma-container accordion-group .row:first-child .col-md-4 {
+        height: 54px;
+    }
+
+}
+
+@media (min-width: 0px) and (max-width: 1024px) {
+    .ma-container .ma-panel-individual {
+        min-height: 406px;
+    }
+
+    .ma-container .ipad-avatar {
+        margin-top: 15px;
+        width: 100%;
+    }
+}
+
+/*css Daniel .ma-ibox-title */
+
+div.inventory-card.ibox > div.ibox-title.ma-ibox-title {
+    color: var(--icon);
+}
+
+div.inventory-card.ibox > div.ibox-title.ma-ibox-title-p {
+    color: var(--primary);
+}
+
+.ma-container .breadcrumb {
+    position: relative;
+    z-index: 10;
+    background-color: transparent;
+}
+
+.ma-container .ma-panel .breadcrumb {
+    margin: 0px;
+    padding: 0px;
+}
+
+.ma-container i.ma-barItemDefault {
+    visibility: hidden;
+}
+
+.ma-container i.ma-barItemSelected {
+    visibility: visible;
+}
+
+/*Lista de codigos de barras*/
+
+.ma-barListInt {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: #deddff;
+}
+
+.ma-container .ma-barList .ma-pad-panel {
+    padding: 0px;
+}
+
+.ma-mtBar {
+    margin-top: 12px;
+    margin-bottom: 3px;
+}
+
+.ma-barItemSelected {
+    background-color: var(--primary);
+}
+
+.ma-scrollBarlist {
+    padding-left: 2px;
+    overflow-y: scroll;
+    direction: rtl;
+    max-height: 200px;
+}
+
+.ma-container .input-group .input-group-btn .btn-group {
+    margin-bottom: 0px;
+}
+
+div.ma-container .ma-barList gmd-input input, div.ma-container .ma-barList gmd-input .form-control.gmd.active ~ label, div.ma-container .ma-barItemSelected gmd-select span, div.ma-container .ma-barList gmd-select .dropdown.gmd label.floating-dropdown {
+    text-align: left;
+}
+
+div.ma-container .ma-barItemSelected gmd-input input, div.ma-container .ma-barItemSelected gmd-input .form-control.gmd.active ~ label, div.ma-container .ma-barItemSelected gmd-select span, div.ma-container .ma-barItemSelected gmd-select .dropdown.gmd label.floating-dropdown {
+    color: #fff;
+    text-align: left;
+}
+
+.ma-connection {
+    position: absolute;
+    right: -15.5px;
+    margin-top: 6px;
+    color: #deddff;
+}
+
+.ma-add-bar {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+menu-shrink[theme=dark] .main-menu .menu-header svg {
+    fill: rgba(255, 255, 255, .7);
+    transform: rotate(4deg);
+}
+
+menu-shrink.fixed .main-menu .menu-header svg {
+    fill: #fff;
+    transform: rotate(-45deg);
+}
+
+.ma-container .ma-btn-roles {
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

@@ -1,0 +1,159 @@
+<div class="ma-container">
+    <div class="ma-page">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel gmd ma-panel" style="margin-top: 15px;">
+                    <div class="panel-body ma-pad-panel">
+                        <div class="row">
+                            <div class="col-md-4" style="margin-top: 7px;">
+                                <gumga-chips placeholder="Buscar Tamanho..."
+                                             on-remove="$ctrl.removeList(value)"
+                                             ng-model="sizes" input-position="start">
+                                    <gumga-chips-item ng-repeat="item in sizes" ng-value="item">
+                                        {{item.name}}
+                                    </gumga-chips-item>
+                                    <gumga-chips-option ng-repeat="option in $ctrl.sizes" ng-value="option">
+                                        {{option.name}}
+                                    </gumga-chips-option>
+                                </gumga-chips>
+                                <br>
+                                <button class="btn btn-primary" ng-click="$ctrl.addList(sizes)">Inserir Tamanhos
+                                </button>
+                            </div>
+                            <div class="col-md-4">
+                                <gmd-input>
+                                    <input type="text"
+                                           class="form-control gmd"
+                                           ng-disabled="$ctrl.teste == false"
+                                           ng-model="$ctrl.custo" id="name">
+                                    <span class="bar"></span>
+                                    <label for="name" class="control-label">Custo</label>
+                                </gmd-input>
+                            </div>
+                            <div class="col-md-4">
+                                <gmd-input>
+                                    <input type="text"
+                                           class="form-control gmd"
+                                           ng-disabled="$ctrl.teste == false"
+                                           ng-model="$ctrl.venda" id="venda">
+                                    <span class="bar"></span>
+                                    <label for="venda" class="control-label">Venda</label>
+                                </gmd-input>
+                            </div>
+                        </div>
+                        <div class="row reset-height" style="display: none;">
+                            <div class="col-md-12">
+                                <button class="btn btn-primary">Gerar tamanhos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-repeat="obj in $ctrl.list">
+            <div class="col-md-12">
+                <div class="panel gmd ma-panel" style="min-height: 123px;">
+                    <div class="panel-body ma-pad-card">
+                        <div class="row reset-height">
+                            <div class="col-md-1 ma-no-pad-left">
+                                <label class="ma-label-grid">
+                                    <span class="bigger">{{obj.label}}</span>
+                                    <span ng-show="colors.length > 0" class="less">Cores</span>
+                                    <span ng-show="colors.length > 0" class="less">{{colors.length}}</span>
+                                </label>
+                            </div>
+                            <div class="col-md-5">
+                                <div style="margin-top: 35px;">
+                                    <gumga-chips placeholder="Buscar Cor..."
+                                                 item-focused="focusedColor"
+                                                 on-selected="$ctrl.generateBars(value, $index)"
+                                                 ng-model="colors" input-position="start">
+                                        <gumga-chips-item ng-repeat="item in colors" ng-value="item">
+                                            {{item.name}}
+                                        </gumga-chips-item>
+                                        <gumga-chips-option ng-repeat="option in $ctrl.colors" ng-value="option">
+                                            {{option.name}}
+                                        </gumga-chips-option>
+                                    </gumga-chips>
+                                </div>
+                            </div>
+                            <div class="col-md-6" ng-show="focusedColor.name != null">
+                                <div class="row">
+                                    <div class="col-md-6" style="margin-top: 35px;">
+                                        <div>
+                                            <gmd-input>
+                                                <input type="text"
+                                                       class="form-control gmd"
+                                                       ng-model="obj.colors[$index].bars[0].value" id="codBarras"
+                                                       required>
+                                                <span class="bar"></span>
+                                                <label for="codBarras" class="control-label">Cód. Barras</label>
+                                            </gmd-input>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row" style="margin-top: 15px;">
+                                            <div class="col-md-6">
+                                                <gmd-input>
+                                                    <input type="text"
+                                                           class="form-control gmd"
+                                                           ng-model="obj.colors[$index].bars[0].custo" id="intCusto">
+                                                    <span class="bar"></span>
+                                                    <label for="intCusto" class="control-label">Custo</label>
+                                                </gmd-input>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <gmd-input>
+                                                    <input type="text"
+                                                           class="form-control gmd"
+                                                           ng-model="obj.colors[$index].bars[0].margem" id="intMargem">
+                                                    <span class="bar"></span>
+                                                    <label for="intMargem" class="control-label">Margem</label>
+                                                </gmd-input>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <gmd-input>
+                                                    <input type="text"
+                                                           class="form-control gmd"
+                                                           ng-model="obj.colors[$index].bars[0].venda" id="intVenda">
+                                                    <span class="bar"></span>
+                                                    <label for="intVenda" class="control-label">Venda</label>
+                                                </gmd-input>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <a class="pull-right" style="margin-bottom: 15px; margin-top: 5px;" href="#">Adicionar Cód. Barras</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button ng-click="$ctrl.mytest();">Testa as parada aqui</button>
+        <!--<div class="row">-->
+        <!--<div class="col-md-12">-->
+        <!--<p ng-repeat="color in $ctrl.colors">-->
+        <!--{{color.id}} - {{color.name}}-->
+        <!--</p>-->
+        <!--<hr>-->
+        <!--<p ng-repeat="size in $ctrl.sizes">-->
+        <!--{{size.id}} - {{size.name}}-->
+        <!--</p>-->
+        <!--<hr>-->
+        <!--<p ng-repeat="color in $ctrl.colors">-->
+        <!--<span ng-repeat="size in $ctrl.sizes"> (Tamanho: {{size.name}}, Cor: {{color.name}})</span>-->
+        <!--</p>-->
+        <!--<p ng-repeat="bar in $ctrl.bars">-->
+        <!--<span>Código de Barras: {{bar.name}}<span>-->
+        <!--</p>-->
+        <!--</div>-->
+        <!--</div>-->
+    </div>
+</div>
+

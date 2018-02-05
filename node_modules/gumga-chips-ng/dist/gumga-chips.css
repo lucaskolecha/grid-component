@@ -1,0 +1,270 @@
+/*MULTI SELECT STYLE*/
+
+.select-clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.select-clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .select-clearfix { height: 1%; }
+.select-clearfix { display: block; }
+/* close commented backslash hack */
+
+gumga-chips .item-disabled{
+  opacity: 0.7;
+}
+
+gumga-chips .option-disabled{
+  opacity: 0.5;
+  background: #FFFFFF !important;
+  cursor: default !important;
+}
+
+gumga-chips > div {
+  width: 100%;
+  min-height: 48px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+  display: block;
+  font-family: Roboto,Helvetica Neue,sans-serif;
+  font-size: 16px;
+  position: relative;
+  background: #FFFFFF;
+  padding: 0 0 8px 8px;
+  vertical-align: middle;
+}
+
+gumga-chips > div .item-container{
+  background: rgb(238,238,238);
+  cursor: default;
+  border-radius: 16px;
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  margin: 8px 8px 0 0;
+  padding: 0 12px;
+  float: left;
+  box-sizing: border-box;
+  max-width: 100%;
+  position: relative;
+  outline: none;
+}
+
+gumga-chips > div .item-container:focus, gumga-chips > div .item-container:active{
+  outline: none;
+}
+
+gumga-chips > div .item-container.item-focused{
+  background: #106CC8;
+  outline: none;
+}
+
+gumga-chips .option-focused{
+  background: rgb(238,238,238);
+  outline: none;
+}
+
+gumga-chips-option li.option-container:active, gumga-chips-option li.option-container:focus{
+  outline: none;
+}
+
+gumga-chips > div .item-container.item-focused span{
+  color: #E0ECF8;
+}
+
+gumga-chips > div .item-container.item-focused > i{
+  color: #E0ECF8;
+}
+
+gumga-chips > div .item-container{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  max-width: 98%;
+}
+
+gumga-chips div.content-bottom{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+  top: 100%;
+}
+
+gumga-chips div.show-new-option.new-focused{
+  background: rgb(238,238,238);
+  outline: none;
+}
+
+gumga-chips div.no-options, gumga-chips div.show-new-option{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 100%;
+  z-index: 1;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+  transition: all .4s cubic-bezier(.25,.8,.25,1);
+  border: none;
+  background: #FFF;
+  padding: 12px;
+}
+
+gumga-chips > div .item-container span{
+  color: #666666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 95%;
+}
+
+gumga-chips > div .item-container > i{
+    font-weight: 900;
+    cursor: pointer;
+    color: #5f5b5b;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+gumga-chips > div .item-container > i:hover{
+  color: #000000;
+}
+
+
+gumga-chips .input-chips-content i.material-icons{
+  position: absolute;
+  top: 12px;
+  right: 15px;
+}
+
+gumga-chips .input-chips-content{
+  position: relative;
+  min-width: 152px;
+}
+
+gumga-chips .input-chips-content{
+  float: left;
+}
+
+gumga-chips .input-chips-content.empty{
+  width: 100%;
+  float: none;
+}
+
+gumga-chips div.input-chips-content input.chips{
+  margin: 8px 8px 0px 5px;
+  display: block;
+  padding: 0;
+  float: left;
+  border: 0;
+  height: 32px;
+  line-height: 32px;
+  vertical-align: middle;
+  user-select: text;
+  cursor: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: start;
+  font: 13.3333px Arial;
+  -webkit-appearance: none;
+  font-size: 14px;
+  box-sizing: border-box;
+  box-shadow: none;
+  outline: none;
+  background: transparent;
+  padding-right: 35px;
+}
+
+gumga-chips > div ul.options{
+  width: 100%;
+  left: 0;
+  top: 100%;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12);
+  transition: all .4s cubic-bezier(.25,.8,.25,1);
+  border: none;
+  padding: 0;
+  background: #FFFFFF;
+  display: none;
+  max-height: 192px;
+  overflow: auto;
+  margin: 0;
+}
+
+gumga-chips > div ul.options.open{
+  display: block;
+  border-top: 1px solid #ccc;
+}
+
+gumga-chips .item-disabled i{
+  cursor: default !important;
+  color: #5f5b5b !important;
+}
+
+gumga-chips > div ul.options li{
+  font-size: 14px;
+  overflow: hidden;
+  padding: 0 15px;
+  line-height: 48px;
+  height: 48px;
+  -webkit-transition: background .15s linear;
+  transition: background .15s linear;
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+gumga-chips > div ul.options li:hover{
+  background: rgb(238,238,238);
+  cursor: pointer;
+}
+
+gumga-chips .progress {
+  max-width: 100%;
+  overflow: hidden;
+  background: #ddd;
+  left: 0;
+  width: 100%;
+  border-radius: 0;
+  height: 2px;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+
+gumga-chips .indeterminate {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  transform: translateZ(0);
+}
+gumga-chips .indeterminate:before, .indeterminate:after {
+  content: '';
+  position: absolute;
+  background-color: #6639B6;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+gumga-chips .indeterminate:before {
+  animation: indeterminate 3s cubic-bezier(0.195, 0.36, 0.945, 1.65) infinite;
+}
+gumga-chips .indeterminate:after {
+  animation: indeterminate 3s cubic-bezier(0.9, -0.59, 0.715, 1.045) infinite;
+}
+
+@keyframes indeterminate {
+  0% {
+    width: 0%;
+    transform: translateX(-100%);
+  }
+  100% {
+    width: 100%;
+    transform: translateX(100%);
+  }
+}

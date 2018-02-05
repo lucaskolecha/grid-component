@@ -1,0 +1,36 @@
+.ma-container .ma-label-grid {
+    color: #fff;
+    text-align: center;
+    margin: 0px;
+    width: 100%;
+    padding: 25px 0px;
+    background-color: var(--primary);
+    float: left;
+}
+
+.ma-container .ma-label-grid span.bigger {
+    font-size: 25px;
+}
+
+.ma-container h1, .ma-container h2, .ma-container h3, .ma-container h4, .ma-container h5, .ma-container h6 {
+    color: var(--defaultColor);
+}
+
+.ma-container .ma-label-grid span.less {
+    margin: 0px;
+    font-size: 12px;
+    display: block;
+}
+
+.ma-container .ma-pad-card {
+    margin: 0px;
+    padding: 0px;
+}
+
+.ma-container h6 {
+    font-size: 11px;
+}
+.ma-container h5 {
+    font-size: 14px;
+    font-weight: 800;
+}
