@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
+
 <head>
     <title>ProductGrid</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
@@ -8,24 +9,41 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="dist/product-grid.css">
 </head>
-<body >
-<div class="gumga-layout" ng-controller="MainCtrl">
 
-    <grid colors="listColors" sizes="listSizes" bars="listBars"></grid>
+<body>
+    <div class="gumga-layout" ng-controller="MainCtrl">
 
-</div>
-
+        <grid colors="listColors" sizes="listSizes" ng-model="maGrid"></grid>
 
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="node_modules/angular/angular.js"></script>
-<script type="text/javascript" src="gumga-layout/gumga-layout.min.js"></script>
-<script src="node_modules/gumga-chips-ng/dist/gumga-chips.min.js"></script>
-<script src="dist/product-grid.js"></script>
-<script src="app.js"></script>
+        <!-- <ul ng-repeat="size in maGrid">
+            <li>
+                {{size.label}}
+                <ul ng-repeat="color in size.colors">
+                    <li>
+                        {{color.name}}
+                        <ul ng-repeat="bar in color.bars">
+                            <li>
+                                {{bar.value}}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul> -->
+
+    </div>
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script type="text/javascript" src="gumga-layout/gumga-layout.min.js"></script>
+    <script src="node_modules/gumga-chips-ng/dist/gumga-chips.min.js"></script>
+    <script src="dist/product-grid.js"></script>
+    <script src="app.js"></script>
 
 </body>
+
 </html>
-
-

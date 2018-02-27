@@ -1,12 +1,12 @@
-.ma-container .ma-label-grid {
-    color: #fff;
-    text-align: center;
-    margin: 0px;
-    width: 100%;
-    padding: 25px 0px;
-    background-color: var(--primary);
-    float: left;
-}
+/*.ma-container .ma-label-grid {*/
+    /*color: #fff;*/
+    /*text-align: center;*/
+    /*margin: 0px;*/
+    /*width: 100%;*/
+    /*padding: 25px 0px;*/
+    /*background-color: var(--primary);*/
+    /*float: left;*/
+/*}*/
 
 .ma-container .ma-label-grid span.bigger {
     font-size: 25px;

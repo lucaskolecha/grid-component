@@ -6,61 +6,87 @@ let Component = {
 
         let ctrl = this;
 
-        ctrl.list = [];
+        ctrl.ngModel = [];
+        ctrl.cost = ctrl.cost || null;
+        ctrl.sale = ctrl.sale || null;
+        ctrl.margin = ctrl.margin || null;
 
-        ctrl.addList = size => ctrl.list = size.map(sz => {
-            ctrl.teste = false;
-
+        ctrl.addList = size => ctrl.ngModel = size.map(sz => {
+            ctrl.blockInput = false;
             return {
                 id: sz.id,
                 label: sz.name,
-                colors : []
+                colors: []
             }
         });
 
-        ctrl.selectColor = (value) => {
-            console.log(value);
+        ctrl.calculateMargin = () => {
+            return ((((ctrl.sale * 100) / ctrl.cost) - 100) / 100) * 100;
+        };
+
+        ctrl.addBarCode = (indexSize, indexColor) => {
+
+            let margin = ctrl.calculateMargin();
+
+            ctrl.ngModel[indexSize].colors[indexColor].bars.push({
+                id: null,
+                value: '0000000000 - new',
+                cost: ctrl.cost,
+                sale: ctrl.sale,
+                margin: margin
+            });
+        };
+
+        ctrl.removeBarCode = (indexSize, indexColor, bar) => {
+            var index = ctrl.ngModel[indexSize].colors[indexColor].bars.indexOf(bar);
+            ctrl.ngModel[indexSize].colors[indexColor].bars.splice(index, 1);
         }
 
         ctrl.generateBars = (value, index) => {
 
-            let margem = ((((ctrl.venda * 100) / ctrl.custo) - 100) / 100) * 100;
+            let margin = ctrl.calculateMargin();
 
-            ctrl.list[index].colors.push({
-                id:value.id,
-                name:value.name,
-                bars:[{
-                    value:'1231231231',
-                    custo: ctrl.custo,
-                    margem: margem,
-                    venda: ctrl.venda
-
+            ctrl.ngModel[index].colors.push({
+                id: value.id,
+                name: value.name,
+                bars: [{
+                    id: null,
+                    value: '0000000000 - ' + value.name,
+                    cost: ctrl.cost,
+                    sale: ctrl.sale,
+                    margin: margin
                 }]
             });
 
-        }
+        };
 
+        ctrl.removeListColor = function (value, index) {
+            for (var i = 0; i <= ctrl.ngModel[index].colors.length - 1; i++) {
+                if (ctrl.ngModel[index].colors[i].name == value.name)
+                    ctrl.ngModel[index].colors.splice(i, 1);
+            }
+        };
 
         ctrl.removeList = function (value) {
-            for (var i = 0; i <= ctrl.list.length - 1; i++) {
-                if (ctrl.list[i].id == value.id)
-                    ctrl.list.splice(i, 1);
+            for (var i = 0; i <= ctrl.ngModel.length - 1; i++) {
+                if (ctrl.ngModel[i].id == value.id)
+                    ctrl.ngModel.splice(i, 1);
             }
-            if (ctrl.list.length == 0) {
-                ctrl.teste = true;
+            if (ctrl.ngModel.length == 0) {
+                ctrl.blockInput = true;
             }
+        };
+
+        ctrl.copyColors = (index) => {
+            let arrayColor = angular.copy(ctrl.ngModel[index-1].colors);
+
+            ctrl.ngModel[index].colors = arrayColor;
         }
-
-        ctrl.mytest = function () {
-            console.log(ctrl.list);
-        }
-
-
     },
     bindings: {
+        ngModel: '=',
         colors: '=',
-        sizes: "=",
-        bars: "="
+        sizes: "="
     }
 }
 
