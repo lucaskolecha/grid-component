@@ -17,13 +17,7 @@ angular.module('myApp', ['gumga.layout', 'gumga.chips', 'mobiageGrid'])
             {id: 5, name: "GGX"}
         ];
 
-        $scope.listBars = [
-            {id: 1, name: "00000000001"},
-            {id: 2, name: "000000000001"},
-            {id: 3, name: "00000000000001"},
-            {id: 4, name: "000000000000001"},
-            {id: 5, name: "0000000000000001"}
-        ];
+        $scope.values = [{"id":1,"name":"P","colors":[{"id":1,"name":"Amarelo","bars":[{"id":null,"value":"0000000000 - Amarelo","cost":null,"sale":null,"margin":null}]},{"id":2,"name":"Preto","bars":[{"id":null,"value":"0000000000 - Preto","cost":null,"sale":null,"margin":null}]},{"id":3,"name":"Verde","bars":[{"id":null,"value":"0000000000 - Verde","cost":null,"sale":null,"margin":null}]}]},{"id":2,"name":"M","colors":[]},{"id":3,"name":"G","colors":[]}];
 
 
     })
