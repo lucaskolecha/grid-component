@@ -10,30 +10,43 @@ let Component = {
     controller: function () {
 
         let ctrl = this;
-
         ctrl.selecionados = ctrl.ngModel;
 
         ctrl.cost = ctrl.cost || null;
         ctrl.sale = ctrl.sale || null;
         ctrl.margin = ctrl.margin || null;
 
-        ctrl.addList = size => ctrl.generate = size.map(sz => {
-
-            ctrl.blockInput = false;
-            return {
-                id: sz.id,
-                name: sz.name,
-                colors: []
-            }
-        });
+        ctrl.addList = size => {
+            ctrl.generate = size.map(sz => {
+                ctrl.blockInput = false;
+                return {
+                    id: null,
+                    name: sz.name,
+                    colors: []
+                }
+            });
+            ctrl.ngModel = ctrl.generate;
+        }
 
         if (ctrl.selecionados) {
             ctrl.addList(ctrl.selecionados);
-
             ctrl.generate = ctrl.selecionados;
 
-            console.log(ctrl.generate);
+            ctrl.selecionados = ctrl.generate.map(item => {
+                return {
+                    id: item.id,
+                    name: item.name
+                }
+            });
+
         }
+
+        ctrl.removeListColor = function (value, index) {
+            for (var i = 0; i <= ctrl.generate[index].colors.length - 1; i++) {
+                if (ctrl.generate[index].colors[i].name == value.name)
+                    ctrl.generate[index].colors.splice(i, 1);
+            }
+        };
 
         ctrl.calculateMargin = () => {
             return ((((ctrl.sale * 100) / ctrl.cost) - 100) / 100) * 100;
@@ -60,7 +73,7 @@ let Component = {
         ctrl.generateBars = (value, index) => {
             let margin = ctrl.calculateMargin();
             ctrl.generate[index].colors.forEach((color) => {
-                if(color.name == value.name) {
+                if (color.name == value.name) {
                     color.bars = [{
                         id: null,
                         value: '0000000000 - ' + value.name,
@@ -70,13 +83,6 @@ let Component = {
                     }]
                 }
             });
-        };
-
-        ctrl.removeListColor = function (value, index) {
-            for (var i = 0; i <= ctrl.generate[index].colors.length - 1; i++) {
-                if (ctrl.generate[index].colors[i].name == value.name)
-                    ctrl.generate[index].colors.splice(i, 1);
-            }
         };
 
         ctrl.removeList = function (value) {
@@ -90,12 +96,35 @@ let Component = {
         };
 
         ctrl.copyColors = (index) => {
-            let arrayColor = angular.copy(ctrl.generate[index-1].colors);
-
-            ctrl.generate[index].colors = arrayColor;
+            let margin = ctrl.calculateMargin();
+            ctrl.generate[index].colors = ctrl.generate[index - 1].colors.map(t => {
+                return {
+                    id: null,
+                    name: t.name,
+                    bars: [{
+                        id: null,
+                        value: '',
+                        cost: ctrl.cost,
+                        sale: ctrl.sale,
+                        margin: margin
+                    }]
+                }
+            });
         }
 
-       ctrl.ngModel =  ctrl.generate;
+        ctrl.checkPrevious = (index) => {
+            if (index > 0) {
+                return (!ctrl.generate[index - 1].colors.length > 0);
+            }else{
+                return true;
+            }
+
+            
+        }
+
+        ctrl.ngModel = ctrl.generate;
+
+
     }
 }
 

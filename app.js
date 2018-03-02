@@ -17,7 +17,7 @@ angular.module('myApp', ['gumga.layout', 'gumga.chips', 'mobiageGrid'])
             {id: 5, name: "GGX"}
         ];
 
-        $scope.values = [{"id":1,"name":"P","colors":[{"id":1,"name":"Amarelo","bars":[{"id":null,"value":"0000000000 - Amarelo","cost":null,"sale":null,"margin":null}]},{"id":2,"name":"Preto","bars":[{"id":null,"value":"0000000000 - Preto","cost":null,"sale":null,"margin":null}]},{"id":3,"name":"Verde","bars":[{"id":null,"value":"0000000000 - Verde","cost":null,"sale":null,"margin":null}]}]},{"id":2,"name":"M","colors":[]},{"id":3,"name":"G","colors":[]}];
+        $scope.values = [{"id":1,"name":"P","colors":[{"id":1,"name":"Amarelo","bars":[{"id":null,"value":"0000000000 - Amarelo","cost":"20","sale":"40","margin":100}]},{"id":2,"name":"Preto","bars":[{"id":null,"value":"0000000000 - Preto","cost":"20","sale":"40","margin":100}]}]},{"id":2,"name":"M","colors":[]},{"id":3,"name":"G","colors":[]}];
 
 
     })

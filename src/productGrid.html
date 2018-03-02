@@ -34,11 +34,6 @@
                                 </gmd-input>
                             </div>
                         </div>
-                        <div class="row reset-height" style="display: none;">
-                            <div class="col-md-12">
-                                <button class="btn btn-primary">Gerar tamanhos</button>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -73,16 +68,17 @@
                                         <gumga-chips-item ng-repeat="item in obj.colors" ng-value="item">
                                             {{item.name}}
                                         </gumga-chips-item>
-                                        <gumga-chips-option ng-repeat="option in $ctrl.colors" ng-value="option">
+                                        <gumga-chips-option ng-if="option.name !== obj.colors[$index].name" ng-repeat="option in $ctrl.colors" ng-value="option">
                                             {{option.name}}
                                         </gumga-chips-option>
                                     </gumga-chips>
-                                    <a ng-show="!$first"style="cursor:pointer; float:right;margin-top:7px;" ng-click="$ctrl.copyColors($index)">Copiar cores do tamanho anterior</a>
+                                    <a ng-hide="!obj.colors.length == 0 || $ctrl.checkPrevious($index)" style="cursor:pointer; float:right;margin-top:7px;" ng-click="$ctrl.copyColors($index)">Copiar cores do tamanho anterior</a>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="row" ng-repeat="color in obj.colors">
-                                    <div ng-repeat="bar in obj.colors[$index].bars" ng-if="color.id == focusedColor.id">
+                                    <div ng-repeat="bar in obj.colors[$index].bars" ng-if="color.$$hashKey == focusedColor.$$hashKey">
+                                        {{focused}}
                                         <div class="col-md-12" style="margin-top: 25px;">
                                             <span class="glyphicon glyphicon-remove" ng-if="!$first" ng-click="$ctrl.removeBarCode($parent.$parent.$parent.$parent.$index,$parent.$parent.$parent.$index,bar)"
                                                 style="position: absolute;
@@ -124,8 +120,8 @@
                                         </div>
                                     </div>
                                     <div class="row">
-                                        <div class="col-md-12" style="margin-top: -33px;" ng-if="color.id == focusedColor.id">
-                                            <a class="pull-right" style="margin-bottom: 15px; margin-top: 5px; cursor: pointer" ng-click="$ctrl.addBarCode($parent.$parent.$index,$index)">Adicionar Cód. Barras</a>
+                                        <div class="col-md-12" ng-if="color.$$hashKey == focusedColor.$$hashKey">
+                                            <a class="pull-right" style="margin-bottom: 15px; margin-top: -33px; cursor: pointer" ng-click="$ctrl.addBarCode($parent.$parent.$index,$index)">Adicionar Cód. Barras</a>
                                         </div>
                                     </div>
                                 </div>
