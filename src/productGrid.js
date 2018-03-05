@@ -76,7 +76,7 @@ let Component = {
                 if (color.name == value.name) {
                     color.bars = [{
                         id: null,
-                        value: '0000000000 - ' + value.name,
+                        value: '0000000000',
                         cost: ctrl.cost,
                         sale: ctrl.sale,
                         margin: margin

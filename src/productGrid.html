@@ -19,14 +19,14 @@
                                 <button class="btn btn-primary" ng-click="$ctrl.addList($ctrl.selecionados)">Inserir Tamanhos
                                 </button>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-xs-6 col-md-4">
                                 <gmd-input>
                                     <input type="text" class="form-control gmd" ng-disabled="$ctrl.blockInput == false" ng-model="$ctrl.cost" id="name">
                                     <span class="bar"></span>
                                     <label for="name" class="control-label">cost</label>
                                 </gmd-input>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-xs-6 col-md-4">
                                 <gmd-input>
                                     <input type="text" class="form-control gmd" ng-disabled="$ctrl.blockInput == false" ng-model="$ctrl.sale" id="sale">
                                     <span class="bar"></span>
@@ -44,18 +44,7 @@
                     <div class="panel-body ma-pad-card">
                         <div class="row reset-height">
                             <div class="col-md-1 ma-no-pad-left text-center">
-                                <label style="text-align: center;
-                                width: 90px;
-                                border: 10px solid var(--primary);
-                                margin-left: 14px;
-                                margin-top: 16px;
-                                height: 90px;
-                                background-color: var(--primary);
-                                border-radius: 50%;
-                                color: #fff;
-                                -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.37);
-                                -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.37);
-                                box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.37)" class="ma-label-grid">
+                                <label class="ma-label-grid">
                                     <span class="bigger">{{obj.name}}</span>
                                     <span ng-show="obj.colors.length > 0" class="less">Cores</span>
                                     <span ng-show="obj.colors.length > 0" class="less">{{obj.colors.length}}</span>
@@ -72,21 +61,17 @@
                                             {{option.name}}
                                         </gumga-chips-option>
                                     </gumga-chips>
-                                    <a ng-hide="!obj.colors.length == 0 || $ctrl.checkPrevious($index)" style="cursor:pointer; float:right;margin-top:7px;" ng-click="$ctrl.copyColors($index)">Copiar cores do tamanho anterior</a>
+                                    <a class="ma-grid-link" ng-hide="!obj.colors.length == 0 || $ctrl.checkPrevious($index)" ng-click="$ctrl.copyColors($index)">Copiar cores do tamanho anterior</a>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="row" ng-repeat="color in obj.colors">
                                     <div ng-repeat="bar in obj.colors[$index].bars" ng-if="color.$$hashKey == focusedColor.$$hashKey">
                                         {{focused}}
-                                        <div class="col-md-12" style="margin-top: 25px;">
-                                            <span class="glyphicon glyphicon-remove" ng-if="!$first" ng-click="$ctrl.removeBarCode($parent.$parent.$parent.$parent.$index,$parent.$parent.$parent.$index,bar)"
-                                                style="position: absolute;
-                                                z-index: 100;
-                                                right: 14px;
-                                                color: #d70000;
-                                                font-size: 14px;
-                                                cursor: pointer;"></span>
+                                        <div class="col-md-12">
+                                                <span class="glyphicon glyphicon-remove ma-remove-grid" ng-if="!$first" ng-click="$ctrl.removeBarCode($parent.$parent.$parent.$parent.$index,$parent.$parent.$parent.$index,bar)"></span>
+                                        </div>
+                                        <div class="col-md-6" style="margin-top: 25px;">
                                             <div>
                                                 <gmd-input>
                                                     <input type="text" class="form-control gmd" ng-model="bar.value" id="codBarras" required>
@@ -103,13 +88,6 @@
                                                     <label for="intcost" class="control-label">cost</label>
                                                 </gmd-input>
                                             </div>
-                                            <div class="col-md-3">
-                                                <gmd-input>
-                                                    <input type="text" class="form-control gmd" ng-model="bar.sale" id="intsale">
-                                                    <span class="bar"></span>
-                                                    <label for="intsale" class="control-label">sale</label>
-                                                </gmd-input>
-                                            </div>
                                             <div class="col-md-2">
                                                 <gmd-input>
                                                     <input type="text" class="form-control gmd" ng-model="bar.margin" id="intmargin">
@@ -117,11 +95,19 @@
                                                     <label for="intmargin" class="control-label">margin</label>
                                                 </gmd-input>
                                             </div>
+                                            <div class="col-md-3">
+                                                <gmd-input>
+                                                    <input type="text" class="form-control gmd" ng-model="bar.sale" id="intsale">
+                                                    <span class="bar"></span>
+                                                    <label for="intsale" class="control-label">sale</label>
+                                                </gmd-input>
+                                            </div>
+
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12" ng-if="color.$$hashKey == focusedColor.$$hashKey">
-                                            <a class="pull-right" style="margin-bottom: 15px; margin-top: -33px; cursor: pointer" ng-click="$ctrl.addBarCode($parent.$parent.$index,$index)">Adicionar Cód. Barras</a>
+                                            <a class="pull-right ma-grid-add-barcode " ng-click="$ctrl.addBarCode($parent.$parent.$index,$index)">Adicionar Cód. Barras</a>
                                         </div>
                                     </div>
                                 </div>

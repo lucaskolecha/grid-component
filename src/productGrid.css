@@ -1,15 +1,41 @@
-/*.ma-container .ma-label-grid {*/
-    /*color: #fff;*/
-    /*text-align: center;*/
-    /*margin: 0px;*/
-    /*width: 100%;*/
-    /*padding: 25px 0px;*/
-    /*background-color: var(--primary);*/
-    /*float: left;*/
-/*}*/
+.ma-container .ma-label-grid {
+    text-align: center;
+    width: 90px;
+    border: 10px solid var(--primary);
+    margin-left: 14px;
+    margin-top: 16px;
+    height: 90px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    color: #fff;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.37);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.37);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.37)
+}
 
 .ma-container .ma-label-grid span.bigger {
     font-size: 25px;
+}
+
+.ma-container .ma-remove-grid {
+    position: absolute;
+    z-index: 100;
+    right: 14px;
+    color: #d70000;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.ma-container .ma-grid-link {
+    cursor:pointer;
+    float:right;
+    margin-top:7px;
+}
+
+.ma-grid-add-barcode {
+    margin-bottom: 15px;
+    margin-top: -33px;
+    cursor: pointer
 }
 
 .ma-container h1, .ma-container h2, .ma-container h3, .ma-container h4, .ma-container h5, .ma-container h6 {
