@@ -6,31 +6,30 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="gumga-layout/gumga-layout.min.css">
     <link rel="stylesheet" href="node_modules/gumga-chips-ng/dist/gumga-chips.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="dist/product-grid.css">
 </head>
 
 <body>
     <div class="gumga-layout" ng-controller="MainCtrl">
-
-        <grid colors="listColors" sizes="listSizes" ng-model="values"></grid>
-
-        <!-- <ul ng-repeat="size in values">
-            <li>
-                {{size.name}}
-                <ul ng-repeat="color in size.colors">
-                    <li>
-                        {{color.name}}
-                        <ul ng-repeat="bar in color.bars">
-                            <li>
-                                {{bar.value}}
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul> -->
-
+        <form name="manytoone">
+            <div class="ma-container">
+                <div class="ma-page">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <grid colors="listColors" sizes="listSizes" layout="config" ng-model="values"></grid>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-primary" ng-click="teste()">
+                                Clique aqui
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 
 
@@ -38,10 +37,13 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
     <script type="text/javascript" src="gumga-layout/gumga-layout.min.js"></script>
     <script src="node_modules/gumga-chips-ng/dist/gumga-chips.min.js"></script>
     <script src="dist/product-grid.js"></script>
     <script src="app.js"></script>
+    <script src="node_modules/gumga-many-to-one-ng/dist/gumga-many-to-one.min.js"></script>
+    <script src="node_modules/gumga-list-ng/dist/gumga-list.min.js"></script>
 
 </body>
 

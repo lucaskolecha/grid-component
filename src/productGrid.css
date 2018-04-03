@@ -60,3 +60,11 @@
     font-size: 14px;
     font-weight: 800;
 }
+.qtdClass {
+    position: relative;
+    z-index: 0;
+}
+
+.item-container {
+    cursor: pointer !important;
+}

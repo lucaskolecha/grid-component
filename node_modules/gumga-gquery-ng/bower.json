@@ -1,6 +1,6 @@
 {
   "name": "gumga-gquery-ng",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "GQuery Gumga",
   "main": "./src/index.ts",
   "authors": [
